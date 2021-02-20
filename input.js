@@ -58,5 +58,4 @@ const readInput = (file) => {
   return output
 }
 
-const test = readInput('inputFiles/a.in')
-console.log(test)
+module.exports = { readInput }
