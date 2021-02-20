@@ -4,7 +4,7 @@ function getNextLibrary (libraries, selected) {
   if (libraries.length === 0) {
     return null
   }
-  const lib = libraries.splice(0, 1)
+  const [lib] = libraries.splice(0, 1)
   selected.push(lib)
   return lib
 }
