@@ -1,15 +1,17 @@
 'use strict'
 
 const { readInput } = require('./input.js')
-const { solve } = require('./core.js')
+const { solve } = require('./core2.js')
 const { writeOutput } = require('./output.js')
 
-const files = ['inputFiles/a.in',
+const files = [
+  'inputFiles/a.in',
   'inputFiles/b.in',
   'inputFiles/c.in',
   'inputFiles/d.in',
   'inputFiles/e.in',
-  'inputFiles/f.in']
+  'inputFiles/f.in'
+]
 
 files.forEach(file => {
   const input = readInput(file)
