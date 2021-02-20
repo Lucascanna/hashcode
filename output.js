@@ -1,3 +1,7 @@
+var path = require('path');
+var fs = require('fs')
+
+
 const output = {
   libraries: [
     {
@@ -17,6 +21,20 @@ const output = {
 
 
 
-const writeOutput = (file, output) => {
+const writeOutput = (file, solution) => {
   const filePath = path.join(__dirname, file)
+  const lines = []
+  lines.push("" + solution.libraries.length)
+  solution.libraries.forEach(library=> {
+    lines.push([library.libraryId, library.books.length].join(" "))
+    lines.push(library.books.join(" "))
+  })
+  const data = lines.join("\n")
+  fs.writeFileSync(filePath, data, 'ascii')
+
+}
+
+
+module.exports = {
+  writeOutput
 }
