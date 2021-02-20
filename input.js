@@ -7,6 +7,7 @@ const problem = {
   ],
   libraries: [
     {
+      libraryId: 0,
       numOfBooks: 5,
       signupDuration: 2,
       booksPerDay: 2,
