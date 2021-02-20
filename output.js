@@ -14,3 +14,9 @@ const output = {
     }
   ]
 }
+
+
+
+const writeOutput = (file, output) => {
+  const filePath = path.join(__dirname, file)
+}
