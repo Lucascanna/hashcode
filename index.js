@@ -2,6 +2,7 @@
 
 const { readInput } = require('./input.js')
 const { solve } = require('./core.js')
+const { writeOutput } = require('./output.js')
 
 const files = ['inputFiles/a.in',
   'inputFiles/b.in',
@@ -13,5 +14,5 @@ const files = ['inputFiles/a.in',
 files.forEach(file => {
   const input = readInput(file)
   const output = solve(input)
-  console.log(output)
+  writeOutput(file.replace('inputFiles', 'outputFiles').replace('.in', '.out'), output)
 })
