@@ -24,7 +24,7 @@ function selectLibrary (book, result, input) {
   const librariesScores = candidatesLibraries.map(computeScoreLibrary)
   let max = 0
   let argMax
-  librariesScores.forEch(x => {
+  librariesScores.forEach(x => {
     if (x.score >= max) {
       max = x.score
       argMax = x.libraryId
